@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Content Creation Magnetific Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Conent Creation Magnetific Web App" />
+    <meta property="og:description" content="Create images to print for the Magnetific Devices or just create images to upload in social media and shhowcase your creations online." />
+    <meta property="og:url" content="https://magnetific.com/magnetific-app/" />
+    <meta property="og:site_name" content="Magnetific" />
+    <meta property="og:image" content="https://magnetific.com/wp-content/uploads/2019/07/Logo.png" />
+    <meta name="twitter:description" content="Create images to print for the Magnetific Devices or just create images to upload in social media and shhowcase your creations online." />
+    <meta name="twitter:title" content="Conent Creation Magnetific Web App" />
+    <meta name="twitter:image" content="https://magnetific.com/wp-content/uploads/2019/07/Logo.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/flatly/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+  </head>
+
+  <body>
+    <header>
+        <a  href="https://magnetific.com">
+          <img id="magnetific-logo" src="img/LogoSM_white.png" style="display: block; margin-left: auto; margin-right: auto" 
+          alt="logo">
+        </a>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="row justify-content-lg-center align-items-end">            
+            <div class="col-md-6">
+              <p style="text-align: center">
+                Try the new Snapchat Lens!
+              </p>
+            <a  href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=b19e4cb77aa840d3aadfb8306f808ed9&metadata=01">
+              <img id="magnetific-snapcode" src="img/snapcode.png" style="display: block; margin-left: auto; margin-right: auto" 
+              alt="logo" width="70" height="70">
+            </a>
+                
+            <!-- ______________________________________________________________________ -->
+                <h4 class="text-center my-3">1. Upload Your Image</h4>
+
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" id="upload-file" />
+                  <label for="upload-file" class="custom-file-label"
+                    >Choose Image</label>
+                </div>
+                <div class="a-tip">
+                    <p><strong>Hint:</strong> hold <span>SHIFT</span> while resizing to keep the original aspect ratio.</p>
+                    <p>Maximum File Resolution 3264 x 2448.</p> 
+                </div>
+
+            <!-- ______________________________________________________________________ -->      
+                <div class="component">
+                    <div id="replaceable">
+                        <div class="overlay" style="
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        margin-left: -100px;
+                        margin-top: -100px;
+                        z-index: 999;
+                        width: 200px;
+                        height: 200px;
+                          border: dashed 2px rgba(222,60,80,.9);
+                        box-sizing: content-box;
+                        pointer-events: none;">
+                          </div>
+                    </div>
+                    <!-- This image must be on the same domain as the demo or it will not work on a local file system -->
+                    <!-- https://en.wikipedia.org/wiki/Cross-origin_resource_sharing -->
+                    <img class="resize-image" id="resize-image" src="img/image.jpg" alt="image for resizing">
+                    <button class="btn-rotate js-rotate" id="rotate-image">Rotate<img class="icon-rotate" src="img/rotate.svg"></button>
+                    <button class="btn-crop js-crop">Crop<img class="icon-crop" src="img/crop.svg"></button>
+                </div>
+                
+            </div>
+
+            <!-- ______________________________________________________________________ -->
+            <div class="col-md-6">
+                <h4 class="text-center my-3">Magnetific Image Preview</h4>
+
+                <div class="component-2">
+                    <div id="replaceable-2" class="overlay-2">
+                        <img id="magnetific-overlay" src="img/Sample_55x55_Perforated_plain.svg" width="500" height="500">
+                    </div>
+                    <div id="underlay">
+                        <svg id="magnetific-underlay" viewbox="0 0 55 55" width="500" height="500" alt="final result">
+                        </svg>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <h4 class="text-center my-3">2. Choose Magnetific Size</h4>
+
+          <div class="row my-4 text-center">
+            <div class="col-md-4">
+                <button id="portrait-btn" class="btn btn-primary btn-block">
+                  Portrait 27x55
+                </button>
+            </div>
+            <div class="col-md-4">
+                <button id="square-btn" class="btn btn-primary btn-block">
+                  Square 55x55
+                </button>
+            </div>
+            <div id="landscape-btn" class="col-md-4">
+                <button class="btn btn-primary btn-block">
+                  Landscape 55x27
+                </button>
+            </div>
+          </div>
+          <!-- ./row -->
+
+          <h4 class="text-center my-3">3. Resize and Crop</h4>
+
+          <p style="text-align: center">
+            Resize by dragging the handls and Press the red Crop  button to create a Magnetific Preview.
+          </p>
+
+          <h4 class="text-center my-3">4. Download/Upload @ Magnetific.com</h4>
+
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <div class="row">
+                  <div class="col-md-6">
+                      <button id="download-svg-btn" class="btn btn-primary btn-block">
+                        Download Vector Image
+                      </button>
+                  </div>
+                  <div class="col-md-6">
+                      <button id="download-png-btn" class="btn btn-primary btn-block" >
+                          Download PNG Image
+                        </button>
+                  </div>
+              </div>
+              <div class="row mt-5">
+                  <div class="col-md-12" id="png-text">
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button id="download-pdf-btn" class="btn btn-danger btn-block">
+                            Ready To Print PDF
+                          </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button id="upload-magnetific-btn" class="btn btn-danger btn-block" disabled>
+                            Upload @ Magnetific.com
+                          </button>
+                    </div>                    
+                </div>
+            </div>
+          </div>
+            <form class="form-horizontal" method="get" action="https://magnetific.com/free-magnetific-content-to-download-and-use/">
+                  <button id="archive-btn" class="btn btn-danger btn-block btn-lg btn-archive" type="submit">
+                      Explore Archive of Images from Users
+                    </button>
+            </form>
+          <div class="row mt-5">
+              <p style="text-align: center">
+                  Privacy notice: We do not host any images in our server. Content creation is entirely happening in your computer and nothing is sent back to our server.
+              </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/modules/addimage.js"></script>
+		<script src="js/main.min.js"></script>
+  </body>
+</html>

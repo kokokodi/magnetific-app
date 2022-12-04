@@ -1,0 +1,218 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700);
+
+
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	background: #88ABC2;
+	color: #EBF7F8;
+	font-weight: 500;
+	font-size: 1em;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+
+a {
+	color: #D0E0EB;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:focus {
+	color: #fff;
+}
+
+.content {
+	max-width: 1290px;
+	padding: 0 1em;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.component {
+	position: relative;
+	background: url(../img/gridme.png) repeat center center;
+	padding: 4em;
+	height: 500px;
+	border: 3px solid #49708A;
+	max-width: 901px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.component-2 {
+	position: relative;
+	height: 500px;
+	border: 0px solid #49708A;
+	max-width: 901px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+/* Header */
+header {
+	
+	background-color: #fff;
+	padding: 10px 10px;
+	border-style: none none solid none ;
+	border-color: rgb(0, 0, 0);
+	border-width : 1px;
+}
+
+.a-tip {
+	padding: 1em;
+}
+
+.a-tip span {
+	border: 2px solid #fff;
+	color: #fff;
+	display: inline-block;
+	padding: 0 5px;
+}
+
+
+/* Related demos */
+.related {
+	text-align: center;
+	padding: 4em 0 2em;
+}
+
+.related > a {
+	width: calc(100% - 20px);
+	max-width: 340px;
+	border: 2px solid #49708A;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	margin: 20px 10px;
+	padding: 25px;
+}
+
+.related a img {
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.related a:hover img,
+.related a:active img {
+	opacity: 1;
+}
+
+.related a h3 {
+	margin: 0;
+	padding: 0.5em 0 0.3em;
+	max-width: 300px;
+	text-align: left;
+	min-height: 60px;
+}
+
+
+
+
+
+
+.resize-container {
+    position: relative;
+    display: inline-block;
+    cursor: move;
+    margin: 0 auto;
+}
+
+.resize-container img {
+    display: block
+}
+
+.resize-container:hover img,
+.resize-container:active img {
+    outline: 2px dashed rgba(222,60,80,.9);
+}
+
+.resize-handle-ne,
+.resize-handle-se,
+.resize-handle-nw,
+.resize-handle-sw {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: rgba(222,60,80,.9);
+    z-index: 999;
+}
+
+.resize-handle-nw {
+    top: -5px;
+    left: -5px;
+    cursor: nw-resize;
+}
+
+.resize-handle-sw {
+    bottom: -5px;
+    left: -5px;
+    cursor: sw-resize;
+}
+
+.resize-handle-ne {
+    top: -5px;
+    right: -5px;
+    cursor: ne-resize;
+}
+
+.resize-handle-se {
+    bottom: -5px;
+    right: -5px;
+    cursor: se-resize;
+}
+
+.btn-crop {
+	position: absolute;
+	vertical-align: bottom;
+	right: 5px;
+	bottom: 5px;
+	padding: 6px 10px;
+	z-index: 999;
+	background-color: rgb(222,60,80);
+	border: none;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.btn-crop img {
+	vertical-align: middle;
+	margin-left: 8px;
+}
+
+.btn-rotate {
+	position: absolute;
+	vertical-align: bottom;
+	right: 90px;
+	bottom: 5px;
+	padding: 6px 10px;
+	z-index: 999;
+	background-color: rgb(128,128,128);
+	border: none;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.btn-rotate img {
+	vertical-align: middle;
+	margin-left: 8px;
+}
+
+.btn-archive {
+	z-index: 999;
+    background:url(../img/archive_btn_background.png);
+    background-repeat: repeat;
+    font-size: 25px;
+    font-weight: 900;
+    padding-left: 41px;
+	border: 1px;
+	border-radius: 8px;
+}
+
+.overlay-2 {
+	position: absolute;
+	z-index: 999;
+}
